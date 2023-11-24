@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Kartverkets kart</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <div id="map" style="height: 800px; width: 1700px"></div>
+    <script>
+        var map = L.map('map').setView([60.69507, 10.89101], 17) //600px 800px
+        L.tileLayer('https://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=topo4&zoom={z}&x={x}&y={y}', {
+        attribution: '<a href="http://www.kartverket.no/">Kartverket</a>'
+        }).addTo(map)
+        //L.marker([60.6950044, 10.8909811]).addTo(map)
+        const geoJsonObject = {
+            
+            "type": "FeatureCollection",
+            "features": [
+              {
+                "type": "Feature",
+                "properties": {
+                    "name": "Intisar sitt hjem",
+                    "popupContent": "Eiendom med tomtegrenser: Hombsgutua 101, 2850 Lena",
+                },
+                "geometry": {
+                  "coordinates": [
+                [
+                [
+                    10.8904863,
+                    60.6950265
+                ],
+                [
+                    10.8911851,
+                    60.6951553
+                ],
+                [
+                    10.8913321,
+                    60.6946691
+                ],
+                [
+                    10.8909444,
+                    60.694691
+                ],
+                [
+                    10.8904863,
+                    60.6950265
+                ]
+                ]
+                  ],
+                  "type": "Polygon"
+                }
+              },
+            ]
+        }
+        
+          const geoJsonStyle = {
+            "color": "#000000",
+            "weight": 1,
+            "opacity": 1
+        }
+              L.geoJSON(geoJsonObject, {
+                    style: geoJsonStyle,
+                    oneEachFeature: function (feature, layer) {
+                    layer.bindPopup(feature?.properties?.title)
+                  
+              }}).addTo(map)
+              const geoJsonObject_two = {
+            
+            "type": "FeatureCollection",
+            "features": [
+              {
+                "type": "Feature",
+                "properties": {
+                    "name": "Intisar sitt hjem",
+                    "popupContent": "Eiendom med tomtegrenser: Hombsgutua 109, 2850 Lena",
+                    "color": "#1D9485"
+                },
+                "geometry": {
+                  "coordinates": [
+                  [
+                    //Del 1 Øvelsebane
+                    
+                    [
+                        10.8956163,
+                        60.6952533
+                    ],
+                    [
+                        10.8955635,
+                        60.6953524
+                    ],
+                    [
+                        10.8946854,
+                        60.6957077
+                    ],
+                    [
+                        10.8942654,
+                        60.6955254
+                    ], 
+                    [
+                        10.8928025,
+                        60.6957777
+                    ],
+                    [
+                        10.8919104,
+                        60.696244
+                    ],
+                    [
+                        10.8893463,
+                        60.6959882
+                    ],
+                    [
+                        10.8893172,
+                        60.6953791
+                    ],
+                    [
+                        10.8897597,
+                        60.6953436
+                    ],
+                    [
+                        10.8900398,
+                        60.6952508
+                    ],
+                    [
+                        10.8904863,
+                        60.6950265
+                    ],
+                    [
+                        10.8911851,
+                        60.6951553
+                    ],
+                    [
+                        10.8913321,
+                        60.6946691
+                    ],
+                    [
+                        10.8944541,
+                        60.6944862
+                    ],
+                    [
+                        10.8947344,
+                        60.6946084
+                    ],
+                    [
+                        10.8956144,
+                        60.6952531
+                    ],
+                    [
+                        10.8956163,
+                        60.6952533
+                    ],
+                    
+                    ]
+                  ],
+                  "type": "Polygon"
+                }
+              },
+              {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+         [ 
+                    //del 2 Lager
+                    
+                    [
+                        10.8947982,
+                        60.6957566
+                    ],
+                    [	
+                        10.895706,
+                        60.6961527
+                    ],
+                    [
+                        10.896057,
+                        60.695967
+                    ],
+                    [
+                        10.896142,
+                        60.6957047
+                    ],
+                    [
+                        10.8960777,
+                        60.695556
+                    ],
+                    [
+                        10.8957751,
+                        60.6953617
+                    ],
+                    [
+                        10.8947982,
+                        60.6957566
+                    ]
+
+                    ]
+                  ],
+                  "type": "Polygon"
+                }
+              },
+              {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+         [  
+
+                    //del 3 Tomt
+                    
+                    [	
+                        10.8962052,
+                        60.6956003
+                    ],
+                    [
+                        10.8968855,
+                        60.6957679
+                    ],
+                    [
+                        10.8962426,
+                        60.6960316
+                    ],
+                    [
+                        10.8961806,
+                        60.6959833
+                    ],
+                    [
+                        10.896239,
+                        60.6957667
+                    ],
+                    [
+                        10.8962052,
+                        60.6956003
+                    ],
+                    
+                    ]
+                  ],
+                  "type": "Polygon"
+                }
+              },
+              {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+         [          
+                    //Del 4 Administrasjon
+                    [	
+                        10.8947838,
+                        60.6945323
+                    ],
+                    [
+                        10.8948712,
+                        60.6944573
+                    ],
+                    [
+                        10.8992443,
+                        60.6935844
+                    ],
+                    [
+                        10.899773,
+                        60.6938593
+                    ],
+                    [
+                        10.8997473,
+                        60.693918
+                    ],
+                    [
+                        10.9003621,
+                        60.6943736
+                    ],
+                    [
+                        10.8974052,
+                        60.6955582
+                    ],
+                    [
+                        10.8973545,
+                        60.6955279
+                    ],
+                    [
+                        10.8973554,
+                        60.6955276
+                    ],
+                    [
+                        10.8968888,
+                        60.695699
+                    ],
+                    [
+                        10.8962049,
+                        60.6955423
+                    ],
+                    [	
+                        10.896077,
+                        60.6954738
+                    ],
+                    [	
+                        10.8947857,
+                        60.6945331
+                    ]
+                ]
+                  ],
+                  "type": "Polygon"
+                }
+              },
+              {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+         [          //Del 5 Beredskap/Varemottak
+         [	
+                        10.8972486,
+                        60.6937472
+                    ],
+                    [	
+                        10.8971962,
+                        60.6937653
+                    ],
+                    [	
+                        10.8972378,
+                        60.6939743
+                    ],
+                    [	
+                        10.8977735,
+                        60.6938729
+                    ],
+                    [	
+                        10.89988023,
+                        60.6933419
+                    ],
+                    [	
+                        10.8988505,
+                        60.6929019
+                    ],
+                    [	
+                        10.8986922,
+                        60.6928476
+                    ],
+                    [	
+                        10.8984574,
+                        60.6928356
+                    ],
+                    [	
+                        10.8982319,
+                        60.692916
+                    ],
+                    [	
+                        10.8980836,
+                        60.693105
+                    ],
+                    [	
+                        10.8980083,
+                        60.6931603
+                    ],
+                    [	
+                        10.8975645,
+                        60.6933959
+                    ],
+                    [	
+                        10.8974979,
+                        60.6934908
+                    ],
+                    [	
+                        10.8974981,
+                        60.6935603
+                    ],
+                    [	
+                        10.8974519,
+                        60.6936135
+                    ],
+                    [	
+                        10.8972166,
+                        60.6936761
+                    ],
+                    [	
+                        10.8972166,
+                        60.6936761
+                    ],
+                    [	
+                        10.8971982,
+                        60.6936897
+                    ],
+                    [	
+                        10.8971936,
+                        60.6937018
+                    ],
+                    [	
+                        10.8972486,
+                        60.6937472
+                    ],
+                    [	
+                        10.8971962,
+                        60.6937653
+                    ],
+                    
+        ]],
+        "type": "Polygon"
+      }
+    }
+            ]
+        }
+        
+              L.geoJSON(geoJsonObject_two, {
+                    oneEachFeature: function (feature, layer) {
+                    layer.bindPopup(feature?.properties?.title)
+                  
+              }}).addTo(map)
+
+        </script>
+        </body>
+        </html>

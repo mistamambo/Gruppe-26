@@ -1,0 +1,308 @@
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("matteo-fusco-m94kn8Rp61Q-unsplash.jpg");
+    background-size: cover;
+    background-position: top left;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+}
+
+header a {
+    background: #000;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.scrollContainer {
+    width: 100vw;
+    min-height: 60vh;
+    overflow: hidden;
+    transition: background-image 2s;
+}
+
+.scrollText {
+    margin: 50vh auto;
+    max-width: 50rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
+}
+#changingBg {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-bottom: 50vh;
+}
+#introduction {
+    background-image: url("timothy-eberly-o849qj6t2qo-unsplash.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.textSection {
+    max-width: 50rem;
+    margin: 0 auto;
+    display: block;
+    clear: both;
+}
+.alignRight {
+    float: right;
+    margin: 0 0 1rem 1rem;
+}
+.circle {
+    width: 250px;
+    height: 100px;
+    border-radius: 90%;
+    padding-top: 15px;
+    box-sizing: border-box;
+}
+.redBg {
+    background: #380101;
+    color: #fff;
+}
+.greenBg {
+    background: #172201;
+    color: #fff;
+}
+.goldBg {
+    background: #2fb2cf;
+    color: #fff;
+}
+.big {
+    text-align: center;
+    font-size: 2rem;
+    display: block;
+    clear: both;
+}
+.small {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 auto;
+    display: block;
+}
+
+
+
+@media screen 
+    and (min-device-width: 1200px) 
+    and (max-device-width: 1600px) 
+    and (-webkit-min-device-pixel-ratio: 1) { 
+        
+header {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("matteo-fusco-m94kn8Rp61Q-unsplash.jpg");
+    background-size: cover;
+    background-position: top left;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+}
+
+header a {
+    background: #000;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.scrollContainer {
+    width: 100vw;
+    min-height: 60vh;
+    overflow: hidden;
+    transition: background-image 2s;
+}
+
+.scrollText {
+    margin: 50vh auto;
+    max-width: 50rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
+}
+#changingBg {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-bottom: 50vh;
+}
+#introduction {
+    background-image: url("timothy-eberly-o849qj6t2qo-unsplash.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.textSection {
+    max-width: 50rem;
+    margin: 0 auto;
+    display: block;
+    clear: both;
+}
+.alignRight {
+    float: right;
+    margin: 0 0 1rem 1rem;
+}
+.circle {
+    width: 250px;
+    height: 100px;
+    border-radius: 90%;
+    padding-top: 15px;
+    box-sizing: border-box;
+}
+.redBg {
+    background: #380101;
+    color: #fff;
+}
+.greenBg {
+    background: #172201;
+    color: #fff;
+}
+.goldBg {
+    background: #2fb2cf;
+    color: #fff;
+}
+.big {
+    text-align: center;
+    font-size: 2rem;
+    display: block;
+    clear: both;
+}
+.small {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 auto;
+    display: block;
+}
+    }
+
+    /* ----------- Retina Screens ----------- */
+@media screen 
+    and (min-device-width: 1200px) 
+    and (max-device-width: 1600px) 
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (min-resolution: 192dpi) { 
+
+    
+header {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("matteo-fusco-m94kn8Rp61Q-unsplash.jpg");
+    background-size: cover;
+    background-position: top left;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+}
+
+header a {
+    background: #000;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.scrollContainer {
+    width: 100vw;
+    min-height: 60vh;
+    overflow: hidden;
+    transition: background-image 2s;
+}
+
+.scrollText {
+    margin: 50vh auto;
+    max-width: 50rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
+}
+#changingBg {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-bottom: 50vh;
+}
+#introduction {
+    background-image: url("timothy-eberly-o849qj6t2qo-unsplash.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.textSection {
+    max-width: 50rem;
+    margin: 0 auto;
+    display: block;
+    clear: both;
+}
+.alignRight {
+    float: right;
+    margin: 0 0 1rem 1rem;
+}
+.circle {
+    width: 250px;
+    height: 100px;
+    border-radius: 90%;
+    padding-top: 15px;
+    box-sizing: border-box;
+}
+.redBg {
+    background: #380101;
+    color: #fff;
+}
+.greenBg {
+    background: #172201;
+    color: #fff;
+}
+.goldBg {
+    background: #2fb2cf;
+    color: #fff;
+}
+.big {
+    text-align: center;
+    font-size: 2rem;
+    display: block;
+    clear: both;
+}
+.small {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 auto;
+    display: block;
+}
+}

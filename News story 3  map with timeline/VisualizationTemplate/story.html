@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lav prisutvikling for boliger i Østre Toten</title>
+    <link href="storystyle.css" rel="stylesheet" media="all">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+</head>
+<body>
+    <header>
+        <div>
+            <h1><mark> Boligprisutvikling i Østre Toten: Kommunen vil gjøre endringer</mark></h1>
+            <a href="#introduction">Scroll ned </a>
+        </div>
+    </header>
+    <section class="scrollContainer" id="introduction">
+        <div class="scrollText"><h2> <mark> Østre Toten kommune har sett en markant stigning i prisutviklingen på boliger i området. Den største prisstigningen
+        blant nabokommunene.</mark></h2>
+        Østre Toten kommune har sett en markant stigning i prisutviklingen på boliger i området. Den største prisstigningen
+        blant nabokommunene. Dette kommer blant annet av lite nybygging og eiendomsskatt som har økt kraftig. Samtidig har
+        antall innbyggere økt, og det fører til kamp om boligene. Planen til Østre Toten kommune er å bygge flere boliger for å
+        styrke de tettstedene med størst antall innbyggere. Dette vil kunne føre til lavere boligpriser på sikt.</p></div>
+        
+        <div class="scrollText">
+        <H2><mark> Variasjon i boligpriser for eneboliger og blokkleiligheter</H2></mark>
+            <p>I 2020 lå boligprisene for eneboliger og blokkleiligheter i Østre Toten kommune på respektivt, 16 850 kr og 30 227 kr.
+            Dette var en liten økning sett mot tall fra 2019, for eneboliger og en merkbar nedgang for blokkleiligheter. Dette
+            skjedde samtidig som skattepromillen ble satt ned fra 7 % til 5 %, og eiendomsskatten gikk ned</p>
+        </div>
+        <div class="scrollText"><h2><mark> Eneboliger øker i pris</mark></h2>
+        <p>I 2021 lå boligprisene for eneboliger og blokkleiligheter i Østre Toten kommune på respektivt, 18 931kr og 30 134kr.
+            Det
+            er en markant økning for eneboliger, men ikke noen særlig økning for prisen på blokkleiligheter. Dette er i snitt
+            ca. 2
+            276kr lavere for eneboliger og 9 476 kr lavere for blokkleiligheter.Merknad: For Hurdal kommune fantes det ikke data
+            for
+            blokkleiligheter, bare eneboliger</p></div>
+                <div class="scrollText">
+                    <h2><mark>Økningen fortsetter også for blokkleiligheter</mark></h2>
+                    <p>I 2020 lå boligprisene for eneboliger og blokkleiligheter i Østre Toten kommune på respektivt, 21 191 kr og 33 168 kr.
+                    Det er en markant økning for eneboliger, og en nokså stor prisøkning på blokkleiligheter. Dette kommer blant annet av
+                    høyere eiendomsskatt. Skattepromillen var på 3,30 promille, men boligprisene har altså motvirket eiendomsskatten</p>
+                </div>
+                
+    </section>
+    <section class="textSection">
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script>
+        var map = L.map('map').setView([60.66387479680311, 10.84163220975835], 10);
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([60.695116052038294, 10.890990377819266]).addTo(map)
+            .bindPopup('Hus til Søsteren')
+            .openPopup();
+        L.marker([60.69445997970117, 10.897837441939744]).addTo(map)
+            .bindPopup('Sivilforsvarets kompetansesenter')
+            .openPopup();
+        L.marker([60.69640316941399, 10.893308873819903]).addTo(map)
+            .bindPopup('NHS Kurssenter')
+            .openPopup();
+        L.marker([60.69313082044533, 10.900337870536594]).addTo(map)
+            .bindPopup('Norsk Hestesenter')
+            .openPopup();
+        L.marker([60.69362552580276, 10.898569700747482]).addTo(map)
+            .bindPopup('Sivilforsvarets sentrallager')
+            .openPopup();
+        L.marker([60.72961247382314, 10.61722098476738]).addTo(map)
+                .bindPopup('Sivilforsvarets sentrallager')
+                .openPopup();
+
+        L.marker([60.74152833863582, 10.761631331772062]).addTo(map)
+                .bindPopup('Nordlia')
+                .openPopup();
+        L.marker([60.71462949054387, 10.851334836335182]).addTo(map)
+                .bindPopup('Kapp')
+                .openPopup();
+        L.marker(60.69370899627108, 10.778270819744531).addTo(map)
+                .bindPopup('Sletta')
+                .openPopup();
+        L.marker([60.64579667955095, 10.83177960564904]).addTo(map)
+                .bindPopup('Lensbygda')
+                .openPopup();
+</script>
+
+    </section>
+    <section id="changingBg" class="scrollContainer">
+        <div id="decline" class="scrollText">
+            <h2><mark>Eneboliger og blokkleiligheter 2022</h2></mark>
+            
+                <article>
+                    Østre Toten kommune merker at de får en demografisk befolkningsutvikling som tilsier at det blir flere
+                        eldre innbyggere
+                        i kommunen. Innbyggertallene ser ut til å avta fram mot 2030, for å bli vesentlig høyere fram til 2050. Det
+                        jobbes med å
+                        bygge nye boliger i områdene hvor det er flestnæringer. I tillegg ser de at det trengs flere boliger i
+                        tettstedene sammenlignet med der det er mer spredt utbygd.
+                </article></p>
+            <sub>Kommunikasjonsdesign Gruppe 24: Sirvan Chalabi, Hamsa Casale og Alexander Myrvold</sub>
+        </div>
+
+    </section>
+
+    <script>
+
+        //Function to check if element is in viewport
+        function isInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                //Improved check of viewport for elements exceeding viewport height
+                (rect.top <= 0 && rect.bottom >= 0) || 
+                (rect.top >= 0 && rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth))
+            );
+        }
+
+        //Make a check when page scrolls:
+        document.addEventListener('scroll', function () {
+            //If a specific id is in the viewport...
+            if(isInViewport(document.getElementById("decline"))) {
+                //...change the parent elements background image
+                document.getElementById("changingBg").style.backgroundImage = "url(https://lokalhistoriewiki.no/images/Beck_Ner-Skjefstad.jpg)"
+            }
+            if(isInViewport(document.getElementById("increase"))) {
+                document.getElementById("changingBg").style.backgroundImage = "url(https://lokalhistoriewiki.no/images/Beck_Ner-Skjefstad.jpg)"
+            }
+            if(isInViewport(document.getElementById("comparisonchart"))) {
+                document.getElementById("changingBg").style.backgroundImage = "url(https://lokalhistoriewiki.no/images/Beck_Ner-Skjefstad.jpg)"
+            }
+
+        }, {
+            passive: true
+        });
+    </script>
+</body>
+</html>

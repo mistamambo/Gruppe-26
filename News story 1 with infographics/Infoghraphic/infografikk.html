@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luftkvaliteten i Østre Toten kommune</title>
+    <link href="storystyle1.css" rel="stylesheet" media="all">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Luftkvaliteten i Østre Toten kommune</h1>
+            <a href="#introduction">Scroll ned for å lese artikkelen</a>
+        </div>
+    </header>
+    <section class="scrollContainer" id="introduction">
+        <div class="scrollText">
+        <h2>Luftkvalitet og helsepåvirkning</h2>
+        <p>Luftforurensning er luft, gass eller partikler som i lufta kan være skadelig for mennesker og økosystemer, men også
+        vegetasjon. Sivilforsvaret ved Østre Toten gjør øvelser som involverer brenning av materialer. Materialene er organiske,
+        men det hevdes at dette kan være skadelig luft. I tillegg er støyen ifølge nærmeste nabo veldig høy. Forskere mener støy
+        er et oversett samfunnsproblem.</p></div>
+        
+        <div class="scrollText">
+        <h2>Mennesker, vegetasjon og økosystemer.</h2>
+        <p>Som de fleste vet trenger mennesker ren luft, vann og mat for å overleve. For vegetasjon og økosystemer generelt kan
+        forurenset luft også være skadelig. Ifølge miljødirektoratet kan forurenset luft gi skade på luftveiene, men kan også gi
+        hjerte- og karsykdommer. Det kan også påvirke det mentale, spesielt Alzheimers og demens. For økosystemer og vegetasjon
+        kan det gi forsuring og bakkenær ozon. Forsuring kommer av nitrogendioksid (NO2) og svoveldioksid (SO2). Bakkenær ozon
+        er ozon som finnes nær bakken som kan være skadelig for vegetasjonen..</p></div>
+    </section>
+    <section class="textSection">
+        <div style="min-height:527px">
+            <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/vDF2z/embed.js?v=1"
+                charset="utf-8"></script><noscript><img src="https://datawrapper.dwcdn.net/vDF2z/full.png" alt="" /></noscript>
+                
+        </div>
+        <p></p>
+    </section>
+    <section id="changingBg" class="scrollContainer">
+        <div id="decline" class="scrollText">
+            <h2>Endring i klimagassutslippene 2021 - 2022</h2>
+            <aside class="alignRight">
+                <div class="circle redBg">
+                    <span class="big">2021 - 2022</span>
+                    <span class="small">-0,8%</span>
+                </div>
+            </aside>
+            <p></p>
+        </div>
+        <div id="increase" class="scrollText">
+            <h2>Utslipp fra norsk økonomisk aktivitet</h2>
+            <p>Endring i utslipp per produsert krone siden 1990
+            2021</p>
+            <aside class="alignRight">
+                <div class="circle greenBg">
+                    <span class="big">1990
+                    2021</span>
+                    <span class="small">-54,5%</span>
+            </aside>
+                </div>
+        <div id="increase" class="scrollText">
+                    <h2>Kommunalt avløp</h2>
+                    <p>Fosfor sluppet ut årlig fra avløpsanlegg 50 pe eller mer
+                    2022</p>
+                    <aside class="alignRight">
+                        <div class="circle goldBg">
+                            <span class="big">
+                                2022</span>
+                            <span class="small">1 033,8
+                            tonn</span>
+                        </div>
+            </aside>
+            
+        </div>
+        <div id="comparisonchart" class="scrollText">
+            <h2>Brenning av organiske materialer</h2>
+            <p>Sivilforsvaret brenner kun organiske materialer. Et av stoffene som kommer av brenning av organiske materialer er
+            polysykliske aromatiske hydrokarboner (PAH). PAH finnes i forskjellige sammensetninger. Benzo(a)pyren er en av typene
+            til PAH forbindelser som er mest miljø- og helseskadelig.
+            NB: Om dette stoffet finnes i det Sivilforsvaret brenner har vi ingen innsikt i.
+            Støy som folk flest tror er farlig er kanskje fra maskiner eller musikken, når man er på en konsert, men ifølge
+            forskere
+            kan støy fra for eksempel biler være skadelig på langsikt. Forsker Catherine ved det europeiske miljøbyrået nevner blant
+            annet i en artikkel at støy fra for eksempel biler kan gi hjertesykdom, overvekt og diabetes.
+            
+            Støy og røyk kan være helseskadelig i for store mengder og over lengre tid. Man bør passe på at man får ro når man er
+            hjemme og kanskje har behov for lydtette dører. Siste alternativ er å finne et annet sted å bo, hvor det ikke er så mye
+            støy eller røyk.</p>
+        </section>
+        <section class="textSection">
+        <div style="min-height:400px">
+            <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/tPffh/embed.js?v=1"
+                charset="utf-8"></script><noscript><img src="https://datawrapper.dwcdn.net/tPffh/full.png" alt="" /></noscript>
+        </div>
+            <p></p>
+        </section>
+        
+        <script>
+
+
+        //Function to check if element is in viewport
+        function isInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                //Improved check of viewport for elements exceeding viewport height
+                (rect.top <= 0 && rect.bottom >= 0) || 
+                (rect.top >= 0 && rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth))
+            );
+        }
+
+        //Make a check when page scrolls:
+        document.addEventListener('scroll', function () {
+            //If a specific id is in the viewport...
+            if(isInViewport(document.getElementById("decline"))) {
+                //...change the parent elements background image
+                document.getElementById("changingBg").style.backgroundImage = "url('Kart.png')"
+            }
+            if(isInViewport(document.getElementById("increase"))) {
+                document.getElementById("changingBg").style.backgroundImage = "url(Kartbilde.png)"
+            }
+            if(isInViewport(document.getElementById("comparisonchart"))) {
+                document.getElementById("changingBg").style.backgroundImage = "url(Kartbilde2.png)"
+            }
+
+        }, {
+            passive: true
+        });
+    </script>
+</body>
+</html>

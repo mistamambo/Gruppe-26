@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ditt distrikt</title>
+    <!-- INCLUDE LEAFLET CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <!-- INCLUDE LEAFLET SCRIPT LIBRARY -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- DEFINE HEIGHT OF MAP ELEMENT -->
+    <style>
+        body {
+            text-align: center;
+        }
+        #map { height: 600px; width: 800px; margin: 10px auto;}
+    </style>
+</head>
+<body>
+    <h3> Kartet viser Sivilforsvarets lokasjoner </h3>
+    <!-- DIV FOR DRAWING MAP -->
+    <div id="map"></div>
+    <!-- SCRIPT -->
+    <script>
+        //CENTER (HiØ)
+        const centerLat = 59.1271
+        const centerLong = 11.4045
+        //ARRAY OF PLACES
+        const places = [
+            {name: "Oppland sivilforsvarsdistrikt ", lat: 60.69367984746043, long: 10.898042235571925 },
+            {name: "Aust-Agder", lat: 58.47553982238882, long: 8.72125782064622 },
+            {name: "Buskerud", lat: 59.78768935125075, long: 10.16081939235769 },
+            {name: "Oppland sivilforsvarsdistrikt", lat: 60.764258181862964,long: 10.872774249485692 },
+            {name: "Hedmark sivilforsvarsdistrikt", lat: 60.86832769013298, long: 11.126779456101831 },
+            {name: "Hordaland", lat: 60.37258526293122, long: 5.337474008366591 },
+            {name: "Østfold Sivilforsvarsdistrikt Østfold har fem fredsinsatsgrupper, én mobil renseenhet (lokalisert i Fredrikstad), seks radiac-målepatruljer og personellstøtteressurser", lat: 59.30155854099212, long: 11.08044190809928 }
+        ]
+        //INITIATE MAP
+        //let map = L.map('map').setView([centerLat, centerLong], 13);
+        let map = L.map('map', {
+            center: [centerLat, centerLong],
+            zoom: 12
+        })
+        //SET MAP CONSTRUCTOR
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+        //SET MARKERS
+        //create custom icon:
+        const remaIcon = L.icon({
+            iconUrl: 'CivilDefence.svg.png',
+            iconSize: [40,40],
+            iconAnchor: [20,20],
+            popupAnchor: [0, -20]
+        })
+        places.map((place) => {
+            L.marker([place.lat, place.long], {icon: remaIcon}).addTo(map).bindPopup(place.name)
+        })
+    </script>
+</body>
+</html>
